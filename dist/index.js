@@ -32,6 +32,7 @@ let obj1 = {
     add: "Don't Know..",
     isBlind: false
 };
+let var1 = 5;
 let id2 = '1';
 let idnumber2 = id2;
 let id3 = 3;
@@ -42,4 +43,68 @@ function add(x, y) {
 function log(msg) {
     console.log(msg);
 }
-console.log('ID:', id, x1, arr1, typeof idnumber2, add(2, 3));
+const user2 = {
+    id: 12334,
+    name: "adf",
+    email: "EWrb"
+};
+const user3 = {
+    id: 2345,
+    name: "qwf",
+    email: "swerg",
+    age: 2345
+};
+user2.name = 'afsgd';
+const addFunc = (x, y) => x + y;
+const sub = (x, y) => x - y;
+class Person {
+    constructor(id, phone, name) {
+        this.id = id;
+        this.name = name;
+        this.phone = phone;
+        this.fnum = 23;
+    }
+    register() {
+        return `${this.id} is fnum`;
+    }
+}
+const object1 = new Person(1, 234, 'Anonymous');
+const object2 = new Person(2, 23784, 'Anonymous_1');
+console.log(object1.name);
+console.log(object2.register());
+class PersonClass {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+        this.bool = true;
+    }
+    register() {
+        return `${this.id} and ${this.name}`;
+    }
+    funcn(num) {
+        let sum = 0;
+        num.map(nu => sum += nu);
+        return sum;
+    }
+    fun() {
+        console.log('function is added');
+    }
+}
+class Human extends Person {
+    constructor(id, phone, name, position) {
+        super(id, phone, name);
+        this.position = position;
+    }
+    register() {
+        return this.position;
+    }
+}
+const Species = new Human(234, 312, 'eraewrd', 'wefg');
+console.log(Species.register());
+function getArray(items) {
+    return new Array().concat(items);
+}
+let numArray = getArray([1, 2, 3, 4]);
+let strArray = getArray(['fewr', 'efwr', 'fewr']);
+numArray.push(2, 6);
+strArray.push('cfghj', 'fghj', 'cvbhj');
