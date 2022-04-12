@@ -180,6 +180,7 @@ class Human extends Person {
     register(): string {
         return this.position
     }
+    
 }
 
 const Species = new Human(234, 312, 'eraewrd', 'wefg');
